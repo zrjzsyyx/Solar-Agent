@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光伏运维助手</title>
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+<div class="chat-container">
+  <header class="chat-header">
+    <div class="header-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>光伏运维助手</h1>
+      <p class="header-status" id="headerStatus">在线</p>
+    </div>
+  </header>
+
+  <div class="messages" id="messages">
+    <div class="welcome">
+      <div class="welcome-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+          <line x1="9" y1="9" x2="9.01" y2="9"/>
+          <line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      </div>
+      <h2>你好，我是光伏运维助手</h2>
+      <div class="welcome-hints">
+        <button class="hint-btn" data-q="现在有什么告警？">现在有什么告警？</button>
+        <button class="hint-btn" data-q="分析下最严重的告警">分析下最严重的告警</button>
+        <button class="hint-btn" data-q="电站整体运行情况怎么样？">电站整体运行情况怎么样？</button>
+        <button class="hint-btn" data-q="最近一周有多少告警？">最近一周有多少告警？</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-bar">
+    <input type="text" id="chatInput" placeholder="输入问题，按回车发送..." autocomplete="off">
+    <button id="chatSend">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/chat.js"></script>
+</body>
+</html>
